@@ -45,3 +45,8 @@ class MyApp extends StatelessWidget {
 
 
  */
+
+/* FAQ
+ * How to add an Android Studio project to GitHub? [log in to github, then vcs]
+ * Can't log in to GitHub on Android Studio? [use Access Token from gitub]
+ * */
