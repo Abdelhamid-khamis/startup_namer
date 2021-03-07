@@ -1,18 +1,24 @@
 import 'package:flutter/material.dart';
 
+// ُimport English words library - gray means imported lib unused yet.
+import 'package:english_words/english_words.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final wordPair = WordPair.random(); // Added this line. 1
+
     return MaterialApp(
       title: 'Welcome to Flutter',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Welcome Abdelhamid'),
+          title: Text('Welcome Muslim Dev'),
         ),
-        body: const Center(
-          child: const Text('Hello Muslim Dev'),
+        body: Center(
+          //child: Text('Hello World'),   // Replace this text, with this var
+          child: Text(wordPair.asPascalCase), // "UpperCamelCase"
         ),
       ),
     );
@@ -50,3 +56,25 @@ class MyApp extends StatelessWidget {
  * How to add an Android Studio project to GitHub? [log in to github, then vcs]
  * Can't log in to GitHub on Android Studio? [use Access Token from gitub]
  * */
+
+/*    5. Add a stateful widget
+  Stateless widgets are immutable, meaning that their properties
+    can't change—all values are final.
+  Stateful widgets maintain state that might change during
+    the lifetime of the widget.
+
+    Implementing a stateful widget requires at least two classes:
+    ---------------------------------------------------------------
+    1) a StatefulWidget class that creates an instance of a State class.
+    2) a State class. The StatefulWidget class is, itself, immutable,
+         but the State class persists over the lifetime of the widget.
+
+    StatefulWidget: RandomWords
+    State class:    RandomWordsState
+
+    class RandomWordsState extends State<RandomWords> {
+  // TODO Add build method
+}
+
+
+ */
